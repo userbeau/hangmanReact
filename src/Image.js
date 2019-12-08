@@ -11,6 +11,7 @@ import hangman6 from './img/hangman6.png';
 import hangman7 from './img/hangman7.png';
 import hangman8 from './img/hangman8.png';
 
+
 class Image extends Component {
 
     render() {
@@ -21,9 +22,30 @@ class Image extends Component {
         height: '450px'
       };
 
+      var image;
+      if(this.props.counter == 0){
+        image = hangman1;
+      }
+      else if(this.props.counter == 1){
+        image = hangman2;
+      }else if (this.props.counter == 2){
+        image = hangman3;
+      }else if (this.props.counter == 3){
+        image = hangman4;
+      }else if (this.props.counter == 4){
+        image = hangman5;
+      }else if (this.props.counter == 5){
+        image = hangman6;
+      }else if (this.props.counter == 6){
+        image = hangman7;
+      }else if (this.props.counter == 7){
+        image = hangman8;
+      }
+
       return (
         <div>
-        <img style={imgStyle} src={hangman1} alt="hangman1" />
+        <img style={imgStyle} src={image} alt="hangman1" />
+
         </div>
       );
     }

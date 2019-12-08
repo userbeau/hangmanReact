@@ -7,12 +7,10 @@ class App extends Component {
 
     render() {
 
-      const titleStyle = {
-        marginLeft: "2em"
-      };
+      
       return (
         <div>
-          <h1 style={titleStyle}>HANGMAN</h1>
+
             <Alphabet />
         </div>
       );
