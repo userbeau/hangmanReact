@@ -48,7 +48,7 @@ var wordList = ["ABALONE",
 "AIRLINE",
 "AIRMAIL",
 "AIRPLAY",
-"AIRPORT ",
+"AIRPORT",
 "AIRSHIP",
 "AIRSHOW",
 "AIRSICK",
@@ -195,7 +195,7 @@ var wordList = ["ABALONE",
 "BREWERY",
 "BRITISH",
 "BROWNIE",
-"BROWSER ",
+"BROWSER",
 "BUFFALO",
 "BUILDER",
 "BULLDOG",
@@ -221,7 +221,7 @@ var wordList = ["ABALONE",
 "CARRIER",
 "CARTOON",
 "CASCADE",
-"CASSIDY ",
+"CASSIDY",
 "CATFISH",
 "CAUTION",
 "CENTRAL",
@@ -241,7 +241,7 @@ var wordList = ["ABALONE",
 "CHECKUP",
 "CHEDDAR",
 "CHEERIO",
-"CHEETAH ",
+"CHEETAH",
 "CHERISH",
 "CHICKEN",
 "CHIMNEY",
@@ -261,7 +261,7 @@ var wordList = ["ABALONE",
 "COCKPIT",
 "COCONUT",
 "COLDEST",
-"COLLAGE ",
+"COLLAGE",
 "COLLECT",
 "COLLEGE",
 "COLONEL",
@@ -627,7 +627,7 @@ var wordList = ["ABALONE",
 "HISTORY",
 "HOLIDAY",
 "HOLLAND",
-"HOMEBOY ",
+"HOMEBOY",
 "HONESTY",
 "HOPEFUL",
 "HOTCAKE",
@@ -705,15 +705,15 @@ var wordList = ["ABALONE",
 "JEWELRY",
 "JOURNEY",
 "JUSTICE",
-"JUSTIFY ",
+"JUSTIFY",
 "KENNEDY",
 "KEYHOLE",
 "KEYNOTE",
 "KINGDOM",
-"KINSHIP ",
+"KINSHIP",
 "KITCHEN",
 "KITTENS",
-"KNEECAP  ",
+"KNEECAP",
 "LANTERN",
 "LAUNDRY",
 "LAWSUIT",
@@ -721,7 +721,7 @@ var wordList = ["ABALONE",
 "LEADERS",
 "LEARNER",
 "LEATHER",
-"LENSCAP ",
+"LENSCAP",
 "LESSONS",
 "LETTERS",
 "LIBERAL",
@@ -729,14 +729,14 @@ var wordList = ["ABALONE",
 "LIBRARY",
 "LICENSE",
 "LINCOLN",
-"LIPREAD ",
+"LIPREAD",
 "LITERAL",
 "LIVABLE",
 "LOBSTER",
 "LOGICAL",
 "LOVABLE",
 "LOVEBUG",
-"LULLABY ",
+"LULLABY",
 "MACHINE",
 "MADISON",
 "MADNESS",
@@ -857,8 +857,8 @@ var wordList = ["ABALONE",
 "OCTAGON",
 "OCTOPUS",
 "OCTOBER",
-"OFFENSE ",
-"OPERATE ",
+"OFFENSE",
+"OPERATE",
 "OPINION",
 "ORGANIC",
 "OTTOMAN",
@@ -1013,7 +1013,7 @@ var wordList = ["ABALONE",
 "QUARTER",
 "QUEENLY",
 "QUEERLY",
-"QUICKEN ",
+"QUICKEN",
 "QUICKER",
 "QUICKLY",
 "QUIETER",
@@ -1031,7 +1031,7 @@ var wordList = ["ABALONE",
 "RAGWEED",
 "RAILCAR",
 "RAINBOW",
-"RAMBLER ",
+"RAMBLER",
 "RAMPANT",
 "RAMPART",
 "RANCHER",
@@ -1040,8 +1040,8 @@ var wordList = ["ABALONE",
 "RAPIDLY",
 "RAPPORT",
 "RAPTURE",
-"RATTLER ",
-"RAVIOLI ",
+"RATTLER",
+"RAVIOLI",
 "REACTOR",
 "REALITY",
 "REALIZE",
@@ -1100,7 +1100,7 @@ var wordList = ["ABALONE",
 "RIVIERA",
 "ROSEBUD",
 "ROUTINE",
-"ROWBOAT ",
+"ROWBOAT",
 "RUGRATS",
 "SABBATH",
 "SANDMAN",
@@ -1114,7 +1114,7 @@ var wordList = ["ABALONE",
 "SEAFOOD",
 "SEAFOWL",
 "SEAGULL",
-"SEALANT ",
+"SEALANT",
 "SEAPORT",
 "SEASICK",
 "SEASIDE",
@@ -1239,7 +1239,7 @@ var wordList = ["ABALONE",
 "THOUGHT",
 "THUNDER",
 "TIMEOUT",
-"TUBACCO ",
+"TOBACCO ",
 "TOENAIL",
 "TOERING",
 "TONIGHT",
@@ -1328,7 +1328,7 @@ var wordList = ["ABALONE",
 "VALLEYS",
 "VAMPIRE",
 "VANILLA",
-"VANLOAD ",
+"VANLOAD",
 "VANPOOL",
 "VARIANT",
 "VARIETY",
@@ -1381,17 +1381,124 @@ var wordList = ["ABALONE",
 class Alphabet extends Component {
   constructor(props){
     super(props);
+    var number = 1 + Math.random() * (1370);
+    number = Math.round(number);
+    var newWord = wordList[number];
+    console.log(newWord)
     this.state = {counter: 0,
-                  word: "SEVENTY",
+                  word: newWord,
                   letterClicked: ""
   };
 
     this.sendLetter = this.sendLetter.bind(this);
-    // this.randomLetter = this.randomLetter.bind(this);
-    // this.updateCounter = this.updateCounter.bind(this);
+    this.randomLetter = this.randomLetter.bind(this);
   }
 
   randomLetter = () => {
+    var A = document.getElementById("A");
+    A.style.textDecoration="none";
+    A.style.cursor="pointer";
+    A.style.color="black";
+    var B = document.getElementById("B");
+    B.style.textDecoration="none";
+    B.style.cursor="pointer";
+    B.style.color="black";
+    var C = document.getElementById("C");
+    C.style.textDecoration="none";
+    C.style.cursor="pointer";
+    C.style.color="black";
+    var D = document.getElementById("D");
+    D.style.textDecoration="none";
+    D.style.cursor="pointer";
+    D.style.color="black";
+    var E = document.getElementById("E");
+    E.style.textDecoration="none";
+    E.style.cursor="pointer";
+    E.style.color="black";
+    var F = document.getElementById("F");
+    F.style.textDecoration="none";
+    F.style.cursor="pointer";
+    F.style.color="black";
+    var G = document.getElementById("G");
+    G.style.textDecoration="none";
+    G.style.cursor="pointer";
+    G.style.color="black";
+    var H = document.getElementById("H");
+    H.style.textDecoration="none";
+    H.style.cursor="pointer";
+    H.style.color="black";
+    var I = document.getElementById("I");
+    I.style.textDecoration="none";
+    I.style.cursor="pointer";
+    I.style.color="black";
+    var J = document.getElementById("J");
+    J.style.textDecoration="none";
+    J.style.cursor="pointer";
+    J.style.color="black";
+    var K = document.getElementById("K");
+    K.style.textDecoration="none";
+    K.style.cursor="pointer";
+    K.style.color="black";
+    var L = document.getElementById("L");
+    L.style.textDecoration="none";
+    L.style.cursor="pointer";
+    L.style.color="black";
+    var M = document.getElementById("M");
+    M.style.textDecoration="none";
+    M.style.cursor="pointer";
+    M.style.color="black";
+    var N = document.getElementById("N");
+    N.style.textDecoration="none";
+    N.style.cursor="pointer";
+    N.style.color="black";
+    var O = document.getElementById("O");
+    O.style.textDecoration="none";
+    O.style.cursor="pointer";
+    O.style.color="black";
+    var P = document.getElementById("P");
+    P.style.textDecoration="none";
+    P.style.cursor="pointer";
+    P.style.color="black";
+    var Q = document.getElementById("Q");
+    Q.style.textDecoration="none";
+    Q.style.cursor="pointer";
+    Q.style.color="black";
+    var R = document.getElementById("R");
+    R.style.textDecoration="none";
+    R.style.cursor="pointer";
+    R.style.color="black";
+    var S = document.getElementById("S");
+    S.style.textDecoration="none";
+    S.style.cursor="pointer";
+    S.style.color="black";
+    var T = document.getElementById("T");
+    T.style.textDecoration="none";
+    T.style.cursor="pointer";
+    T.style.color="black";
+    var U = document.getElementById("U");
+    U.style.textDecoration="none";
+    U.style.cursor="pointer";
+    U.style.color="black";
+    var V = document.getElementById("V");
+    V.style.textDecoration="none";
+    V.style.cursor="pointer";
+    V.style.color="black";
+    var W = document.getElementById("W");
+    W.style.textDecoration="none";
+    W.style.cursor="pointer";
+    W.style.color="black";
+    var X = document.getElementById("X");
+    X.style.textDecoration="none";
+    X.style.cursor="pointer";
+    X.style.color="black";
+    var Y = document.getElementById("Y");
+    Y.style.textDecoration="none";
+    Y.style.cursor="pointer";
+    Y.style.color="black";
+    var Z = document.getElementById("Z");
+    Z.style.textDecoration="none";
+    Z.style.cursor="pointer";
+    Z.style.color="black";
     var number = 1 + Math.random() * (1370);
     number = Math.round(number);
     console.log(number);
@@ -1406,10 +1513,17 @@ class Alphabet extends Component {
 
   sendLetter = (letter) => {
    this.setState({letterClicked: letter});
+   var disableLetter = document.getElementById(letter);
+   disableLetter.style.textDecoration="line-through";
+   disableLetter.style.cursor="none";
+   disableLetter.style.color="gray";
    var theWord = this.state.word;
    if(!theWord.includes(letter)) {
      this.setState({counter: this.state.counter+1});
      console.log(this.state.counter);
+   }
+   if(this.state.counter == 7){
+     this.randomLetter();
    }
  }
 
@@ -1454,6 +1568,11 @@ class Alphabet extends Component {
         flexDirection: "row"
       };
 
+      const noClick = {
+        pointerEvents: "none",
+        textDecoration: "line-through"
+      };
+
       return (
         <div>
         <div style={horizontalStyle}>
@@ -1461,32 +1580,32 @@ class Alphabet extends Component {
         <img style={resetStyle} src={reset} onClick={this.randomLetter} alt="reset" />
         </div>
         <ul style={alphabetStyle}>
-          <li id="a" style={listItemStyle} onClick={this.sendLetter.bind(this, "A")}>A</li>
-          <li id="b" style={listItemStyle} onClick={this.sendLetter.bind(this, "B")}>B</li>
-          <li id="c" style={listItemStyle} onClick={this.sendLetter.bind(this, "C")}>C</li>
-          <li id="d" style={listItemStyle} onClick={this.sendLetter.bind(this, "D")}>D</li>
-          <li id="e" style={listItemStyle} onClick={this.sendLetter.bind(this, "E")}>E</li>
-          <li id="f" style={listItemStyle} onClick={this.sendLetter.bind(this, "F")}>F</li>
-          <li id="g" style={listItemStyle} onClick={this.sendLetter.bind(this, "G")}>G</li>
-          <li id="h" style={listItemStyle} onClick={this.sendLetter.bind(this, "H")}>H</li>
-          <li id="i" style={listItemStyle} onClick={this.sendLetter.bind(this, "I")}>I</li>
-          <li id="j" style={listItemStyle} onClick={this.sendLetter.bind(this, "J")}>J</li>
-          <li id="k" style={listItemStyle} onClick={this.sendLetter.bind(this, "K")}>K</li>
-          <li id="l" style={listItemStyle} onClick={this.sendLetter.bind(this, "L")}>L</li>
-          <li id="m" style={listItemStyle} onClick={this.sendLetter.bind(this, "M")}>M</li>
-          <li id="n" style={listItemStyle} onClick={this.sendLetter.bind(this, "N")}>N</li>
-          <li id="o" style={listItemStyle} onClick={this.sendLetter.bind(this, "O")}>O</li>
-          <li id="p" style={listItemStyle} onClick={this.sendLetter.bind(this, "P")}>P</li>
-          <li id="q" style={listItemStyle} onClick={this.sendLetter.bind(this, "Q")}>Q</li>
-          <li id="r" style={listItemStyle} onClick={this.sendLetter.bind(this, "R")}>R</li>
-          <li id="s" style={listItemStyle} onClick={this.sendLetter.bind(this, "S")}>S</li>
-          <li id="t" style={listItemStyle} onClick={this.sendLetter.bind(this, "T")}>T</li>
-          <li id="u" style={listItemStyle} onClick={this.sendLetter.bind(this, "U")}>U</li>
-          <li id="v" style={listItemStyle} onClick={this.sendLetter.bind(this, "V")}>V</li>
-          <li id="w" style={listItemStyle} onClick={this.sendLetter.bind(this, "W")}>W</li>
-          <li id="x" style={listItemStyle} onClick={this.sendLetter.bind(this, "X")}>X</li>
-          <li id="y" style={listItemStyle} onClick={this.sendLetter.bind(this, "Y")}>Y</li>
-          <li id="z" style={listItemStyle} onClick={this.sendLetter.bind(this, "Z")}>Z</li>
+          <li id="A" style={listItemStyle} onClick={this.sendLetter.bind(this, "A")}>A</li>
+          <li id="B" style={listItemStyle} onClick={this.sendLetter.bind(this, "B")}>B</li>
+          <li id="C" style={listItemStyle} onClick={this.sendLetter.bind(this, "C")}>C</li>
+          <li id="D" style={listItemStyle} onClick={this.sendLetter.bind(this, "D")}>D</li>
+          <li id="E" style={listItemStyle} onClick={this.sendLetter.bind(this, "E")}>E</li>
+          <li id="F" style={listItemStyle} onClick={this.sendLetter.bind(this, "F")}>F</li>
+          <li id="G" style={listItemStyle} onClick={this.sendLetter.bind(this, "G")}>G</li>
+          <li id="H" style={listItemStyle} onClick={this.sendLetter.bind(this, "H")}>H</li>
+          <li id="I" style={listItemStyle} onClick={this.sendLetter.bind(this, "I")}>I</li>
+          <li id="J" style={listItemStyle} onClick={this.sendLetter.bind(this, "J")}>J</li>
+          <li id="K" style={listItemStyle} onClick={this.sendLetter.bind(this, "K")}>K</li>
+          <li id="L" style={listItemStyle} onClick={this.sendLetter.bind(this, "L")}>L</li>
+          <li id="M" style={listItemStyle} onClick={this.sendLetter.bind(this, "M")}>M</li>
+          <li id="N" style={listItemStyle} onClick={this.sendLetter.bind(this, "N")}>N</li>
+          <li id="O" style={listItemStyle} onClick={this.sendLetter.bind(this, "O")}>O</li>
+          <li id="P" style={listItemStyle} onClick={this.sendLetter.bind(this, "P")}>P</li>
+          <li id="Q" style={listItemStyle} onClick={this.sendLetter.bind(this, "Q")}>Q</li>
+          <li id="R" style={listItemStyle} onClick={this.sendLetter.bind(this, "R")}>R</li>
+          <li id="S" style={listItemStyle} onClick={this.sendLetter.bind(this, "S")}>S</li>
+          <li id="T" style={listItemStyle} onClick={this.sendLetter.bind(this, "T")}>T</li>
+          <li id="U" style={listItemStyle} onClick={this.sendLetter.bind(this, "U")}>U</li>
+          <li id="V" style={listItemStyle} onClick={this.sendLetter.bind(this, "V")}>V</li>
+          <li id="W" style={listItemStyle} onClick={this.sendLetter.bind(this, "W")}>W</li>
+          <li id="X" style={listItemStyle} onClick={this.sendLetter.bind(this, "X")}>X</li>
+          <li id="Y" style={listItemStyle} onClick={this.sendLetter.bind(this, "Y")}>Y</li>
+          <li id="Z" style={listItemStyle} onClick={this.sendLetter.bind(this, "Z")}>Z</li>
 
 
         </ul>

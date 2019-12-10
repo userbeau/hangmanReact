@@ -9,7 +9,7 @@ import hangman4 from './img/hangman4.png';
 import hangman5 from './img/hangman5.png';
 import hangman6 from './img/hangman6.png';
 import hangman7 from './img/hangman7.png';
-import hangman8 from './img/hangman8.png';
+import hangman9 from './img/hangman9.png';
 
 
 class Image extends Component {
@@ -39,13 +39,12 @@ class Image extends Component {
       }else if (this.props.counter == 6){
         image = hangman7;
       }else if (this.props.counter == 7){
-        image = hangman8;
+        image = hangman9;
       }
 
       return (
         <div>
         <img style={imgStyle} src={image} alt="hangman1" />
-
         </div>
       );
     }

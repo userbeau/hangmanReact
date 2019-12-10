@@ -54,6 +54,10 @@ class Word extends Component {
             }
           }
         }
+        if (one != "_" && two != "_" && three != "_" && four != "_" && five != "_" && six != "_" && seven != "_") {
+          alert("You win, the word was: " + this.props.theWord)
+          window.location.reload();
+        }
   }
 
 
